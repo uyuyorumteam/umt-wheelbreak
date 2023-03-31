@@ -12,6 +12,6 @@ repository 'https://github.com/uyuyorumteam/umt-wheelbreak'
 client_script 'wheelbreak.lua'
 
 dependencies {
-	'/server:6351',
-    '/onesync',
+ '/server:6351',
+ '/onesync',
 }
