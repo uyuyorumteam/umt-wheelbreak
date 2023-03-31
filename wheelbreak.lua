@@ -33,7 +33,7 @@ CreateThread(function()
                     local randomWheelIndex = math.random(0,3) -- Wheel index to break off
                     --@see https://github.com/citizenfx/fivem/commit/46205c9ff15bdc9e19d81dd126500a854c8547e9
                     BreakOffVehicleWheel(vehicle, randomWheelIndex, true, false, true, false)
-                    --waitLoop = 5000
+                    waitLoop = 5000
                 end
             end
         end
