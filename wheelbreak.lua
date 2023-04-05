@@ -14,8 +14,8 @@ local excludedClasses = {
     [16] = true
 }
 
---@param Vehicle class 
---@return boolean
+---@param class string Vehicle class 
+---@return boolean
 local function isVehicleClassValid(class)
     return not excludedClasses[class]
 end
@@ -31,7 +31,7 @@ CreateThread(function()
                 local vehicleSpeed = math.ceil(GetEntitySpeed(vehicle) * 3.6)
                 if HasEntityCollidedWithAnything(vehicle) and vehicleSpeed >= wheelBreakSpeed then
                     local randomWheelIndex = math.random(0,3) -- Wheel index to break off
-                    --@see https://github.com/citizenfx/fivem/commit/46205c9ff15bdc9e19d81dd126500a854c8547e9
+                    ---@see https://github.com/citizenfx/fivem/commit/46205c9ff15bdc9e19d81dd126500a854c8547e9
                     BreakOffVehicleWheel(vehicle, randomWheelIndex, true, false, true, false)
                     waitLoop = 5000
                 end
